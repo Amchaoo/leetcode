@@ -13,10 +13,5 @@ int main() {
         cout << val << endl;
     }
 
-<<<<<<< HEAD
     return 0;
 }
-=======
-	return 0;
-}
->>>>>>> f61d19231778311a98f8738c92483ae2582dc7c2
