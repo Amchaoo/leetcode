@@ -3,11 +3,13 @@
 using namespace std;
 
 int main() {
-	RecSolution s;
-	string s = "aab";
-	string p = "c*a*b";
+    RecSolution r;
+    DpSolution d;
+    string s = "aab";
+	string p = "c*a*b**";
 
-	bool matchRes = s.isMatch(s, p);
+    bool matchRes = r.isMatch(s, p);
+    bool dRes = d.isMatch(s, p);
 
-	return 0;
+    return 0;
 }
