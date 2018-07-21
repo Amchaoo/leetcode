@@ -12,13 +12,16 @@
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
+            "externalConsole": false,
             "environment": [],
-            "externalConsole": true,
             "MIMode": "lldb",
             "preLaunchTask": "echo",
             "osx": {
                 "MIMode": "lldb"
             },
+            "logging": {
+                "programOutput": true
+            }
         }
     ]
 }
