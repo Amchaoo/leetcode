@@ -34,10 +34,12 @@ public:
                     hittedValues[2] = nums[endIndex];
                     result.push_back(hittedValues);
                     
-                    while(endIndex > frontIndex && nums[endIndex] == nums[endIndex - 1]) endIndex--;
-                    while(frontIndex < endIndex && nums[frontIndex] == nums[frontIndex + 1]) frontIndex++;
+                    while(nums[endIndex] == nums[--endIndex]);
+                    while(nums[frontIndex] == nums[++frontIndex]);
                 }
-            }        
+            }     
+
+            while(nums[i] == nums[i + 1]) i++;   
         }
 
         return result;
