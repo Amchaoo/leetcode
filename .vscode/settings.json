@@ -11,6 +11,8 @@
         "utility": "cpp",
         "vector": "cpp",
         "__hash_table": "cpp",
-        "unordered_map": "cpp"
+        "unordered_map": "cpp",
+        "limits": "cpp",
+        "__locale": "cpp"
     }
 }
