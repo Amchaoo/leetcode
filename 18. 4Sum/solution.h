@@ -22,10 +22,10 @@ public:
                     nowSum = nums[startPoint] + nums[endPoint];
 
                     if (nowSum < newTarget) {
-                        while(nums[startPoint] == nums[++startPoint] && startPoint < endPoint);
+                        startPoint++;
                     }
                     else if (nowSum > newTarget) {
-                        while(nums[endPoint] == nums[--endPoint] && startPoint < endPoint);
+                        endPoint--;
                     }
                     else {
                         result.push_back({nums[i], nums[j], nums[startPoint], nums[endPoint]});
