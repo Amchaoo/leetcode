@@ -13,6 +13,7 @@
         "__hash_table": "cpp",
         "unordered_map": "cpp",
         "limits": "cpp",
-        "__locale": "cpp"
+        "__locale": "cpp",
+        "iosfwd": "cpp"
     }
 }
