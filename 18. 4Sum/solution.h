@@ -22,21 +22,21 @@ public:
                     nowSum = nums[startPoint] + nums[endPoint];
 
                     if (nowSum < newTarget) {
-                        while(nums[startPoint] == nums[++startPoint]);
+                        while(nums[startPoint] == nums[++startPoint] && startPoint < endPoint);
                     }
                     else if (nowSum > newTarget) {
-                        while(nums[endPoint] == nums[--endPoint]);
+                        while(nums[endPoint] == nums[--endPoint] && startPoint < endPoint);
                     }
                     else {
                         result.push_back({nums[i], nums[j], nums[startPoint], nums[endPoint]});
-                        while(nums[startPoint] == nums[++startPoint]);
-                        while(nums[endPoint] == nums[--endPoint]);
+                        while(nums[startPoint] == nums[++startPoint] && startPoint < endPoint);
+                        while(nums[endPoint] == nums[--endPoint] && startPoint < endPoint);
                     }
                 }
 
-                while(nums[j] == nums[++j]);
+                while(nums[j] == nums[++j] && j < size - 2);
             }
-            while(nums[i] == nums[++i]);
+            while(nums[i] == nums[++i] && i < size - 3);
         }
 
         return result;
