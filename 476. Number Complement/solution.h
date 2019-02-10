@@ -5,18 +5,14 @@ using namespace std;
 class Solution {
 public:
     int findComplement(int num) {
-        int len = getBinaryLength(num);
-
-        return pow(2, len) - 1 - num;
-    }
-private:
-    int getBinaryLength(int integerValue) {
+        int numCopy = num;
         int len = 0;
-        while(integerValue != 0) {
+
+        while(numCopy != 0) {
+            numCopy >>= 1;
             len++;
-            integerValue /= 2;
         }
 
-        return len;
+        return pow(2, len) - 1 - num;
     }
 };
