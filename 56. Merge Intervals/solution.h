@@ -6,8 +6,8 @@ using namespace std;
 class Solution {
 public:
     vector<vector<int>> merge(vector<vector<int>>& intervals) {
-        vector<vector<int>> res;
         sortASC(intervals);
+        vector<vector<int>> res;
         int intervalsSize = intervals.size();
 
         if (intervalsSize == 0) {
@@ -29,11 +29,13 @@ public:
         }
 
         res.push_back(beingPushed);
+
+        return res;
     }
 
 private:
     static bool compare(vector<int>& x, vector<int>& y) {
-        return x[0] - y[0];
+        return x[0] > y[0];
     }
 
     void sortASC(vector<vector<int>>& intervals) {
