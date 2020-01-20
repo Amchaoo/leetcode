@@ -10,35 +10,38 @@ public:
             circleIndex = 0,
             x = 0,
             y = 0,
-            index = 0;
+            index = 1;
         vector<vector<int>> res(n, vector<int>(n));
 
         while (circleIndex <= circleCount) {
             // 向右
-            while (y <= n - 1 - circleIndex * 2) {
+            while (y <= n - 1 - circleIndex) {
                 res[x][y++] = index++;
             }
             y--;
+            x++;
 
             // 向下
-            while (x <= n - 1 - circleIndex * 2) {
-                res[++x][y] = index++;
+            while (x <= n - 1 - circleIndex) {
+                res[x++][y] = index++;
             }
             x--;
+            y--;
 
             // 向左
             while (y >= circleIndex) {
-                res[x][--y] = index++;
+                res[x][y--] = index++;
             }
             y++;
+            x--;
 
             // 向上
             while (x > circleIndex) {
-                res[--x][y] = index++;
+                res[x--][y] = index++;
             }
             x++;
-
             y++;
+
             circleIndex++;
         }
 
